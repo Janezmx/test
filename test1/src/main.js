@@ -20,8 +20,8 @@ import { isPC } from './constant'
 Vue.prototype.$wx = wx
 Vue.prototype.$isIOS = isIOS
 Vue.prototype.$isPC = isPC
-import VConsole from 'vconsole' // ios必须安装才能使用；安卓可通过 微信访问1.http://debugtbs.qq.com 2. debugmm.qq.com/?forcex5=true
-new VConsole()
+// import VConsole from 'vconsole' // ios必须安装才能使用；安卓可通过 微信访问1.http://debugtbs.qq.com 2. debugmm.qq.com/?forcex5=true
+// new VConsole()
 
 
 import ComponentsInstall from '@/components/install'

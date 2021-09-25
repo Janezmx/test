@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import VConsole from 'vconsole'
   export default {
     name: 'app',
     data () {
@@ -13,7 +14,12 @@
       }
     },
     async mounted () {
-      console.log('app', location.href)
+      if (this.$route.query?.show === '1') {
+        localStorage.setItem('showConsole', '1')
+      }
+      if (localStorage.getItem('showConsole') === '1') {
+        new VConsole()
+      }
       await this.$nextTick()
       document.addEventListener('visibilitychange', () => {
         const state = localStorage.getItem('visibilityState')
