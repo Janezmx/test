@@ -1,8 +1,7 @@
 <template>
 <!--<div>{{location.href}}</div>-->
   <div>
-    <div></div>
-    <button @click="first">第一页</button>
+    <video src="../assets/video/conan.mp4" controls style="object-fit: fill" autoplay preload="auto"></video>
   </div>
 </template>
 
@@ -10,16 +9,33 @@
 export default {
   name: "third",
   mounted () {
-    console.log('third', location.href)
+    const vm = this
+    const video = document.querySelector('video')
+    // video.play()
+    if (window.WeixinJSBridge) {
+      vm.videoPlay()
+    } else {
+      document.addEventListener('WeixinJSBridgeReady', function(){
+        vm.videoPlay()
+      }, false)
+    }
   },
   methods: {
-    first () {
-      this.$router.push({name: 'first'})
+    videoPlay () {
+      const video = document.querySelector('video')
+      // video.controls = 'controls'
+      video.volumn = 0.1
+      WeixinJSBridge.invoke('getNetworkType', {}, function () {
+        video.play()
+      })
     }
   }
 };
 </script>
 
 <style scoped>
-
+video {
+  width: 100%;
+  height: 100%;
+}
 </style>
