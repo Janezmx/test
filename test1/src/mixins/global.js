@@ -8,6 +8,9 @@ export default {
     },
     Rate () {
       return this.ClientHeightRate > this.ClientWidthRate ? this.ClientWidthRate : this.ClientHeightRate
+    },
+    ShowConsole () {
+      return localStorage.getItem('showConsole') === '1'
     }
   }
 }
