@@ -1,7 +1,7 @@
 <template>
 <!--<div>{{location.href}}</div>-->
-  <div>
-    <video src="../assets/video/conan.mp4" controls style="object-fit: fill" autoplay preload="auto"></video>
+  <div :style="{height:ClientHeightRate*1334+'px',width:ClientWidthRate*750+'px'}">
+<!--    <video :controls="ShowConsole" src="../assets/video/conan.mp4" style="object-fit: fill" autoplay preload="auto"></video>-->
   </div>
 </template>
 

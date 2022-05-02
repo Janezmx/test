@@ -16,11 +16,15 @@ import VConsole from 'vconsole'
     async mounted () {
       if (this.$route.query?.show === '1') {
         localStorage.setItem('showConsole', '1')
+      } else {
+        localStorage.setItem('showConsole', '0')
       }
       if (localStorage.getItem('showConsole') === '1') {
         new VConsole()
       }
       await this.$nextTick()
+      window.addEventListener('resize', this.onWindowResize)
+      this.onWindowResize()
       document.addEventListener('visibilitychange', () => {
         const state = localStorage.getItem('visibilityState')
         localStorage.setItem('visibilityState', state+document.visibilityState)
@@ -31,6 +35,19 @@ import VConsole from 'vconsole'
       })
     },
     methods: {
+      onWindowResize () {
+        setTimeout(() => {
+          this.$store.commit('setClientHeight', document.getElementById('app').clientHeight)
+          this.$store.commit('setClientWidth', document.getElementById('app').clientWidth)
+          // setTimeout(() => { // ios需要延时判断
+          //   if (window.orientation === 90 || window.orientation === -90) {
+          //     this.$store.commit('setLandscape', true)
+          //   } else {
+          //     this.$store.commit('setLandscape', false)
+          //   }
+          // }, 500)
+        }, 0)
+      }
     }
   }
 </script>
