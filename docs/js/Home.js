@@ -1,1 +1,1 @@
-import{o as r,g as e}from"./vendor.js";import{_ as o}from"./plugin-vue_export-helper.js";var n=o({},[["render",function(o,n){return r(),e("div",null,"home")}]]);export{n as default};
+import{d as s,B as t,o as a,g as e,l as o,C as r,F as n,D as l,H as m}from"./vendor.js";import{B as u}from"./index3.js";const p=l("div",null,"home-test",-1),d=m("home-test"),i=s({setup(s){const l=t(),m=()=>{l.push({name:"hello"})};return(s,t)=>{const l=u;return a(),e(n,null,[p,o(l,{type:"primary",onClick:m},{default:r((()=>[d])),_:1})],64)}}});export{i as default};
