@@ -1,0 +1,1 @@
+System.register(["./@vue-legacy-b86327d3.js"],(function(e){"use strict";var t,s,u;return{setters:[function(e){t=e.q,s=e.s,u=e.B}],execute:function(){e("default",t({setup:()=>()=>s("div",null,[u("hello tsx")])}))}}}));
