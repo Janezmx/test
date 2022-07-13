@@ -1,0 +1,1 @@
+System.register(["./vendor-legacy.5fead1e6.js"],(function(e){"use strict";var s,o,t;return{setters:[function(e){s=e.d,o=e.y,t=e.h}],execute:function(){var l={moduleClass:"_moduleClass_15i7z_1"};e("default",s({setup:()=>(console.log("css--model",l),()=>o("div",{class:`root  ${l.moduleClass}`},[t("测试css-modules")]))}))}}}));

@@ -1,0 +1,1 @@
+System.register(["./vendor-legacy.5fead1e6.js"],(function(e){"use strict";var t,n,s;return{setters:[function(e){t=e.d,n=e.y,s=e.h}],execute:function(){e("default",t({setup:()=>()=>n("div",null,[s("hello tsx")])}))}}}));
