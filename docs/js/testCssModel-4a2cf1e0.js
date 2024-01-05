@@ -1,0 +1,1 @@
+import{q as e,s as o,B as l}from"./@vue-2a6541b0.js";const a="_moduleClass_15i7z_1";var s={moduleClass:a},d=e({setup(){return console.log("css--model",s),()=>o("div",{class:`root  ${s.moduleClass}`},[l("\u6D4B\u8BD5css-modules")])}});export{d as default};
